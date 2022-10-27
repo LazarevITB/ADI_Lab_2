@@ -25,3 +25,10 @@ print(1, str(i+1))
 #Применение преобразований
 X0 = pd.DataFrame(pca.transform(X))[0]
 X0.head()
+
+#Загружаем инфу
+df2 = pd.read_csv("data/djia_index.csv")
+df2.head()
+
+corr = np.corrcoef(X0, df2["^DJI"])
+print(2, f"{corr[1, 0]:.2f}")
