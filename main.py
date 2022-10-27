@@ -21,3 +21,7 @@ for i, v in enumerate(pca.explained_variance_ratio_):
         break
 
 print(1, str(i+1))
+
+#Применение преобразований
+X0 = pd.DataFrame(pca.transform(X))[0]
+X0.head()
