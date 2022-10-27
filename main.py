@@ -5,3 +5,8 @@ import sys
 
 sys.path.append("..")
 
+#Чтение данных
+df = pd.read_csv('data/close_prices.csv')
+df.head
+
+X = df.loc[:, "AXP":]
