@@ -32,3 +32,6 @@ df2.head()
 
 corr = np.corrcoef(X0, df2["^DJI"])
 print(2, f"{corr[1, 0]:.2f}")
+
+#Определяем наибольший вес
+print(3, X.columns[np.argmax(pca.components_[0])])
